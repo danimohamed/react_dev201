@@ -13,5 +13,5 @@ This is a brief introduction to React, a popular JavaScript library for building
 3. **Unidirectional Data Flow:** React enforces a unidirectional data flow, where data flows in a single direction from the parent components to child components. This makes it easier to understand and debug how data changes in the application.
 
 4. **JSX Syntax:** React uses JSX (JavaScript XML) syntax, which allows developers to write HTML-like code within JavaScript. This makes it easier to create and manage component templates.
-
+ 
 5. **React Hooks:** Hooks are a feature introduced in React 16.8 that allow developers to use state and other React features without writing class components. Hooks enable functional components to have state and lifecycle methods, making it easier to reuse logic between components.
