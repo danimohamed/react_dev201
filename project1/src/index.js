@@ -5,7 +5,6 @@
         this.nom=nom;
         this.age=age;
         
-
     }
     affichage(){
         return `Etudiant,${this.nom},"age:",${this.age},"ans" `;
