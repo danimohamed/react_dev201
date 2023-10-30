@@ -277,8 +277,7 @@ function trouverMax(arr){
 function trouverMin(arr){    
     return Math.min.apply(null,arr);
 }
-
------------->*/
+;
 const voiture = [
     { marque: "bmw", couleur: "rouge", prix: 10000 },
     { marque: "audi", couleur: "vert", prix: 20000 },
@@ -292,7 +291,158 @@ const voiture = [
     { marque: "opel", couleur: "marron", prix: 100000 },
 ];
 
-const marques = voiture.map(function (voiture) {
-    return voiture.marque;
-});
-console.log(marques);
+
+//afficher les marques des voitures
+//   return voiture.marque;
+//});
+//console.log(marques);
+
+//afficher les voitures dont le prix est supérieur à 50000
+
+//const vt=voiture.filter(function (v) {
+//    return v.prix>49999;
+//});
+//console.log(vt);
+
+//const vt=voiture.find(function (v) {
+//return v.prix>49999;
+//});
+//console.log(vt);
+
+const prixTotal=voiture.reduce(function (acc,v) {
+    return acc+v.prix;
+},0);
+console.log(prixTotal);
+
+//destructuring array
+ let ages=[20,30,40,50,60];
+ let [a,b,...rest]=ages;
+ let tab2=[...ages];
+    console.log(tab2);
+
+//permuter les valeurs de deux variables
+let a=10;
+let b=20;
+//avant la permutaion
+console.log("a=",a,"b=",b);
+[a,b]=[b,a];
+//apres la permutation
+console.log("a=",a,"b=",b);
+
+
+function factoriel(n){
+    if(n==0){
+        return 1;
+    }else{
+        return n*factoriel(n-1);
+    }
+}
+console.log(factoriel(5));
+
+
+function compteur(){
+    let cpt=0;
+    return function(){
+        cpt+=1;
+        return cpt;
+    }
+}
+let next=compteur();
+console.log(next());
+
+function add(x){
+    return function(y){
+        return x+y;
+    }
+}
+const n1=add(5);
+
+console.log(n1(2));
+
+
+
+
+function mult(){
+    let x=2;
+    return function(y){
+        x++;
+        return x*y;
+    }
+
+
+}
+const n1=mult();
+console.log(n1(5));
+console.log(n1(4));
+
+
+let spanH=document.getElementById("heure");
+let spanM=document.getElementById("minute");
+let spanS=document.getElementById("seconde");
+
+let timeInitial={h:10,m:38,s:47};
+let timeCurrent=timeInitial;
+let time=null;
+
+
+function incrementer(){
+    timeCurrent.s++;
+    if(timeCurrent.s==60){
+        timeCurrent.s=0;
+        timeCurrent.m++;
+    }
+    if(timeCurrent.m==60){
+        timeCurrent.m=0;
+        timeCurrent.h++;
+    }
+    if(timeCurrent.h==24){
+        timeCurrent.h=0;
+    }
+    spanH.innerHTML=timeCurrent.h;
+    spanM.innerHTML=timeCurrent.m;
+    spanS.innerHTML=timeCurrent.s;
+}
+function demarrer(){
+    time=setInterval(incrementer,1000);
+}
+function arreter(){
+    clearInterval(time);
+}
+function reinitialiser(){
+    timeCurrent=timeInitial;
+    spanH.innerHTML=timeCurrent.h;
+    spanM.innerHTML=timeCurrent.m;
+    spanS.innerHTML=timeCurrent.s;
+}
+function display(){
+    spanH.innerHTML=timeCurrent.h;
+    spanM.innerHTML=timeCurrent.m;
+    spanS.innerHTML=timeCurrent.s;
+}
+demarrer();
+
+
+// arrow function
+function somme(a,b){
+    return a+b;
+}
+console.log(somme(5,6));
+
+//meth2
+const somme=(a,b)=>a+b;
+console.log(somme(5,6));
+
+const fact2=n=>(n==0?1:n*fact2 (n-1));
+console.log(fact2(5));
+
+function somme(a,b,c){
+    return a+b+c;
+}
+let nombers=[4,8,3];
+console.log(somme(...nombers));
+
+------------>*/
+let n1,n2,n3;
+let tab=[1,2,3];
+[n1,n2,n3]=tab;
+console.log(n1,n2,n3);
