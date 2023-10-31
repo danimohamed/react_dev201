@@ -441,8 +441,75 @@ function somme(a,b,c){
 let nombers=[4,8,3];
 console.log(somme(...nombers));
 
------------->*/
+
 let n1,n2,n3;
 let tab=[1,2,3];
 [n1,n2,n3]=tab;
 console.log(n1,n2,n3);
+
+
+let x=3;
+function purefunction(y){
+    return x+y;
+}
+console.log(purefunction(10));
+
+
+const stagiere=[
+    {id:1,nom:"dani",filiere:"dev 201"},
+    {id:2,nom:"mohamed",filiere:"dev 201"},
+    {id:3,nom:"ali",filiere:"dev 201"},
+];
+
+function PureArrayobjet(newS){
+    let newStagiere=[...stagiere,newS];
+    return newStagiere;
+}
+var newS={id:4,nom:"ahmed",filiere:"dev 201"};
+console.log(PureArrayobjet(newS));
+
+const nbs=[1,3,6,7,8];
+  function PureInsert(index,value){
+    let newN=[...nbs];
+    newN.splice(index,0,value);
+    return newN;
+  }
+console.log(PureInsert(3,22));//[1,3,6,22,7,8]
+
+const nbs=[1,3,6,7,8];
+  function PureInsert(index,value){
+    /*
+    let newN=[...nbs];
+    newN.splice(index,0,value);
+    return newN;
+    return [...nbs.slice(0,index),
+    value,...nbs.slice(index)]
+    
+  }
+
+//console.log(PureInsert(3,22));//[1,3,6,22,7,8]*
+
+const stagiere=[
+    {id:1,nom:"dani",filiere:"dev 201"},
+    {id:2,nom:"mohamed",filiere:"dev 201"},
+    {id:3,nom:"ali",filiere:"dev 201"},
+];
+
+function PureSupp(ids){
+    return [...stagiere.filter(s=>s.id!=ids)];
+    
+}
+
+
+console.log(PureSupp(3));
+
+
+let  stagiere=[
+    {id:1,nom:"dani",filiere:"dev 201"},
+    {id:2,nom:"mohamed",filiere:"dev 201"},
+    {id:3,nom:"ali",filiere:"dev 201"},
+];
+
+stagiere=[...stagiere.filter(s=>s.id==3?s.filiere="dev 202":false)];
+console.log(stagiere);
+------------>*/
