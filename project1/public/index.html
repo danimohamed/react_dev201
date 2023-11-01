@@ -1,9 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>React App</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.6/umd/react.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.development.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <!--
+        <div id="app"></div>
+        
+        <div id="liste"></div>
+        -->
+        <div id="REVISION"></div>
+    </body>
+    <script type="text/babel">
+        /*
+        var p = <p>Bonjour React</p>;
+        ReactDOM.render(p, document.getElementById("app"));
+        
+        var u = (
+            <ul>
+                <li>HTML</li>
+                <li>PYTHON</li>
+                <li>JAVASCRIPT</li>
+                <li>PHP</li>
+            </ul>
+        );
+        ReactDOM.render(u, document.getElementById("liste"));
+        
+        
+        var c="green"
+        var styles={listStyleType:"none",fontStyle:"italic",color:c}
+        var items = (
+            <ul className="c1" style={styles}>
+                <li>items1</li>
+                <li>items2</li>
+                <li>items3</li>
+            </ul>
+        );
+        ReactDOM.render(items, document.getElementById("app"));
+        
+
+
+        var noms=["ali","ahmed","imane","fatima"]
+
+        var listnoms=<ul>
+                {noms.map(n=><li>{n}</li>)}
+            </ul>
+ 
+        ReactDOM.render(listnoms,document.getElementById("div1"))
+        
+        function message(props){
+            return <h1>Bonjour {props.nom}</h1>
+        }
+        ReactDOM.render(<message nom="ali"/>,document.getElementById("div1"))
+
+    var noms=["ali","ahmed","imane","fatima"]
+    var csscode={listStyleType:"none",color:"red"}
+    var listnoms=function({e}){
+        return <ul style={csscode}>
+            {e.map(n=><li>{n}</li>)}
+        </ul>
+    }
+
+    ReactDOM.render(<Message nom={n}/>,document.getElementById("div1"))
+    
+
+
+    var listNoms=function({ns}){
+        return <ul style={{color:c}}>
+            {ns.map((n,1)=> <li key={i}>{n}</li>)}
+        </ul>
+
+    }
+    ReactDOM.render(<listNoms ns={["ali","ahmed","imane","fatima"]}/>,document.getElementById("div1"))
+
+ 
+   function F3 ({n,p,c}){
+   return 
+    <p style={{color:c,textDecoration:"underline"}}>
+        <span>hello:</span>
+        <i>{n}</i>
+        &nbsp;
+        <i>{p}</i>
+        
+        
+        
+        </p>
+        var clr="red";
+        ReactDOM.render(<F3 n="ali" p="ahmed" c={clr}/>,document.getElementById("REVISION"))
+   }
+    */
+
+
+
+
+
+    function Fmessage(){
+        return <h1>Bonjour function</h1>
+    }
+    class Fmessage2 extends React.Component{
+        render(){
+            return <h1>hello class</h1>
+        }
+    }
+    </script>
 </html>
