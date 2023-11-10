@@ -11,14 +11,16 @@
         </style>
     </head>
     <body>
+        <div id="root"></div>
         <!--
         <div id="app"></div>
         
         <div id="liste"></div>
-        -->
+        
         <div id="REVISION"></div>
     </body>
     <script type="text/babel">
+    
         /*
         var p = <p>Bonjour React</p>;
         ReactDOM.render(p, document.getElementById("app"));
@@ -95,11 +97,6 @@
         var clr="red";
         ReactDOM.render(<F3 n="ali" p="ahmed" c={clr}/>,document.getElementById("REVISION"))
    }
-    */
-
-
-
-
 
     function Fmessage(){
         return <h1>Bonjour function</h1>
@@ -109,5 +106,21 @@
             return <h1>hello class</h1>
         }
     }
-    </script>
+    */
+   class ListVc extends React.Component{
+       constructor(){
+           super();
+       }
+       render(){
+           return <ul>
+               {voiture.map((n,i)=><li>{n}</li>)}
+
+           </ul>
+       }
+         
+    }
+    ReactDOM.render(<ListVc/>,document.getElementById("REVISION"))
+       </script>
+    -->
+    </body>
 </html>
