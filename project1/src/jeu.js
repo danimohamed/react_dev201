@@ -3,6 +3,7 @@ export default class JouDe extends React.Component
 {
     constructor(){
         super()
+        this.state={cont:0}
     }
     render()
     {
@@ -11,10 +12,10 @@ export default class JouDe extends React.Component
                 <img src="image/icon.jpg"/>
                 <h1>Jeu de</h1>
                 <h2>Face:.....</h2>
-                <h2>Nombre d'essai:....</h2>
-                <button>Play</button>
+                <h2>Nombre d'essai:{this.state.cont}</h2>
+                <button onClick={()=>this.setState({cont:this.state.cont+1})}>Play</button>
                 <p>bravo vous avez trouver la face cachée</p>
-                <butto>Instialiser</butto>
+                <button>Instialiser</button>
             </div>
         )
     }
