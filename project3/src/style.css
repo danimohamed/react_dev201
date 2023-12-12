@@ -1,28 +1,126 @@
-form {
+div {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
+    color: #CEF0D4;
+    font-family: 'Rouge Script', cursive;
+    font-size: 50px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 20px;
     text-align: center;
-    color: #333;
+    text-shadow: 1px 1px 2px #082b34;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #a7e8f8;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 8px;
+    text-shadow: 1px 1px 1px #082b34;
+}
+
+input {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #a7e8f8;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    border: 1px solid #a7e8f8;
+    border-radius: 4px;
+    background-color: #082b34;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+select {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #a7e8f8;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.2;
+    border: 1px solid #a7e8f8;
+    border-radius: 4px;
+    background-color: #082b34;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 button {
-    display: block;
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
+    padding: 10px;
+    background-color: #ae7cb7;
+    color: #fff;
     border: none;
-    margin: auto;
     border-radius: 4px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.ul {
+    list-style-type: none;
+    padding-left: 10px;
+}
+
+.ul li {
+    padding: 10px;
+    background-color: #ae7cb7;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.ul li:hover {
+    background-color: #0056b3;
+}
+
+.span {
+    color: #CEF0D4;
+    font-family: 'Rouge Script', cursive;
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1.2;
+    margin: 0 0 20px;
+    text-align: center;
+    text-shadow: 1px 1px 2px #082b34;
+    width: 200px;
+}
+
+.span:hover {
+    color: rgb(255, 255, 255);
+}
+.delete {
+    background-color: #93052b;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 16px;
+    margin-left: 40px;
+    padding: 5px 6px; 
+    font-size: 20px;
+
+}
+.delete:hover {
+    background-color: #00aab3;
 }

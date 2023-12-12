@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { CalculIMC } from './imc';
-import { Exrv } from './exrv';
+import { Tp_hooks } from './tp_hooks';
 
 
 
 
 
 const root = document.getElementById('root');
-ReactDOM.render(<Exrv />, root);
+ReactDOM.render(< Tp_hooks />, root);
