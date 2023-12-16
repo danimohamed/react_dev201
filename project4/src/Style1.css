@@ -1,0 +1,56 @@
+/* Add this CSS to your component or in a separate stylesheet */
+
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  div {
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  h2 {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  /* Optional: Style the recapitulative section */
+  div > div {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  /* Optional: Style the recapitulative section */
+  div > div > h2 {
+    color: #333;
+  }
+  
