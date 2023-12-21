@@ -1,5 +1,3 @@
-// Composant3.js
-
 import React, { useState } from 'react';
 
 const Composant3 = ({ users }) => {
@@ -7,34 +5,34 @@ const Composant3 = ({ users }) => {
     const [filteredUsers, setFilteredUsers] = useState([]);
 
     const handleSearch = () => {
-        const filtered = users.filter(user => user.id.toString().includes(searchId));
+        const filtered = users.filter(users => users.id.toString().includes(searchId));
         setFilteredUsers(filtered);
     };
 
     return (
         <div>
-            <h1>Rcherche par Id</h1>
-            <label>Enter User ID:</label>
+            <h1>Recherche par ID</h1>
+            <label>Entrer User ID:</label>
             <input
                 type="text"
                 value={searchId}
                 onChange={(e) => setSearchId(e.target.value)}
             />
-            <button onClick={handleSearch}>Search</button>
+            <button onClick={handleSearch}>Recherche</button>
 
             {filteredUsers.length > 0 ? (
                 <div>
-                    <h2>User with ID: {searchId}</h2>
+                    <h2>User  ID: {searchId}</h2>
                     <ul>
-                        {filteredUsers.map(user => (
-                            <li key={user.id}>
-                                {user.name} - {user.email}
+                        {filteredUsers.map(users => (
+                            <li key={users.id}>
+                                {users.name} - {users.email}
                             </li>
                         ))}
                     </ul>
                 </div>
             ) : (
-                <p>No user found with the specified ID.</p>
+                <p>Aucun users n'est affecté a ce users </p>
             )}
         </div>
     );
