@@ -1,9 +1,12 @@
 const initialState = {
     users: [
         { id: 1, name: 'Mohamed Allaoui', email: 'allaoui@gmail.com' },
-        { id: 2, name: 'Hind Bennani', email: 'benani@gmail.com' }
+        { id: 2, name: 'Hind Bennani', email: 'benani@gmail.com' },
+
     ]
 }
+
+
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'AddUser':
