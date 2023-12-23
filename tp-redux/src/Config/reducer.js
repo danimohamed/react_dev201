@@ -2,6 +2,7 @@ const initialState = {
     users: [
         { id: 1, name: 'Mohamed Allaoui', email: 'allaoui@gmail.com' },
         { id: 2, name: 'Hind Bennani', email: 'benani@gmail.com' },
+        { id: 3, name: 'ahmed rami', email: 'rami@gmail.com' }
 
     ]
 }
@@ -10,7 +11,7 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case 'AddUser':
-            return { ...state, users: [...state, action.payload] }
+            return { ...state, users: [...state.users, action.payload] }
         case 'UpdateUser':
             const user = state.users.find((u) => u.id === parseInt(action.payload.id))
             if (user) {
