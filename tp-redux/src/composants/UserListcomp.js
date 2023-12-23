@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import { DeleteUserAction } from "../Config/actions"
+import { Link, Route, Routes, BrowserRouter } from "react-router-dom"
+import { UpdateUsercomp } from "./UpdateUsercomp"
 export function UserListcomp() {
     const utilisateurs = useSelector(data => data.users)
     const dispatch = useDispatch()
@@ -25,7 +27,10 @@ export function UserListcomp() {
                                 <td>{u.name}</td>
                                 <td>{u.email}</td>
                                 <td>
-                                    <button>Edit</button>
+
+                                    <Link to={`/update/${u.id}`}><button>Edit</button></Link>
+
+
                                     <button onClick={() => { handlesupp(u.id) }}>Delete</button>
                                 </td>
                             </tr>)
