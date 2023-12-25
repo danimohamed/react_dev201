@@ -4,10 +4,11 @@ import { Link } from "react-router-dom";
 function ListStagiaire() {
     const stgs = useSelector(d => d.stagiaires);
     const dispatch = useDispatch()
-    const del=(cd)=>{
-        dispatch(DeleteStgAction(cd))
+    const del = (cd) => {
+        if (window.confirm("sure ??"))
+            dispatch(DeleteStgAction(cd))
     }
-    return(
+    return (
         <table>
             <thead>
                 <tr>
@@ -18,18 +19,18 @@ function ListStagiaire() {
                 </tr>
             </thead>
             <tbody>
-                {stgs.map((s)=>
-                <tr>
-                    <td>{s.code}</td>
-                    <td>{s.nom}</td>
-                    <td>{s.prenom}</td>
-                    <td>
-                        <Link to={`/editstagiaire/${s.code}`}>
-                            <button>edit</button>
-                        </Link>
-                        <button onClick={()=>del(s.code)}>delete</button>
-                    </td>
-                </tr>
+                {stgs.map((s) =>
+                    <tr>
+                        <td>{s.code}</td>
+                        <td>{s.nom}</td>
+                        <td>{s.prenom}</td>
+                        <td>
+                            <Link to={`/editstagiaire/${s.code}`}>
+                                <button>edit</button>
+                            </Link>
+                            <button onClick={() => del(s.code)}>delete</button>
+                        </td>
+                    </tr>
                 )}
             </tbody>
         </table>

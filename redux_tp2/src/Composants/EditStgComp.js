@@ -12,15 +12,17 @@ function EditStagiaire() {
     const [nom, setNom] = useState(stg.nom)
     const [prenom, setPrenom] = useState(stg.prenom)
     const edit = (e) => {
-        e.preventDefault();
-        dispatch(EditStgAction({
-            code: code,
-            nom: nom,
-            prenom: prenom
+        if (window.confirm("sure ??")) {
 
-        }))
-        alert("bien modifie")
-        navigate('/');
+            e.preventDefault();
+            dispatch(EditStgAction({
+                code: code,
+                nom: nom,
+                prenom: prenom
+    
+            }))
+            navigate('/');
+        }
     }
     return (
         <form onSubmit={(e) => edit(e)}>

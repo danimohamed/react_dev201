@@ -5,22 +5,22 @@ import { useNavigate } from "react-router-dom";
 function AddStagiaire() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    // const confirmation = window.confirm("sure ??");
     const [nom, setNom] = useState("")
     const [prenom, setPrenom] = useState("")
     const stgs = useSelector(d => d.stagiaires);
 
     const ajouter = (event) => {
         event.preventDefault();
-        dispatch(AddStgAction({
-            code: stgs[stgs.length - 1].code + 1,
-            nom: nom,
-            prenom: prenom
-        }))
-        setNom('')
-        setPrenom('')
-        alert("bien ajouter")
-        navigate('/');
+        if (window.confirm("sure ??")) {
+            dispatch(AddStgAction({
+                code: stgs.at(-1).code + 1,
+                nom: nom,
+                prenom: prenom
+            }))
+            setNom('')
+            setPrenom('')
+            navigate('/');
+        }
     }
 
 
