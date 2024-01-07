@@ -7,7 +7,7 @@ const initialState = {
     ]
 }
 
-export const reducer = (state = initialState, action) => {
+export const reducer = (action, state = initialState) => { 
     switch (action.type) {
         case 'Add':
             return {
@@ -16,17 +16,16 @@ export const reducer = (state = initialState, action) => {
             }
         case 'Delete':
             return {
-                ...state,stagiaires:[
+                ...state, stagiaires: [
                     ...state.stagiaires.
-                    filter(
-                    (s)=> s.code !== parseInt(action.payload))
+                        filter(
+                            (s) => s.code !== parseInt(action.payload))
                 ]
             }
         case 'Edit':
             const stg = state.stagiaires.
-            find((s)=> s.code === parseInt(action.payload.code))
-            if (stg)
-            {
+                find((s) => s.code === parseInt(action.payload.code))
+            if (stg) {
                 stg.nom = action.payload.nom
                 stg.prenom = action.payload.prenom
             }

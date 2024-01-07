@@ -1,18 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { EditEmployer } from "../config/actions";
+import './style.css';
 
 function EditStagiaire() {
     const { matricule } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
     const employers = useSelector((state) =>
         state.employers.find((employer) => employer.matricule === parseInt(matricule))
     );
 
-    const [nom, setNom] = useState(employers ? employers.nom : "");
-    const [departement, setDepartement] = useState(employers ? employers.departement : "");
+
+    useEffect(() => {
+
+        if (employers) {
+            setNom(employers.nom || "");
+            setDepartement(employers.departement || "");
+        }
+    }, [employers]);
+
+    const [nom, setNom] = useState("");
+    const [departement, setDepartement] = useState("");
+
 
     const editEmployer = (e) => {
         e.preventDefault();
@@ -32,6 +44,7 @@ function EditStagiaire() {
 
     return (
         <form onSubmit={(e) => editEmployer(e)}>
+
             <label>Nom</label>
             <input
                 type="text"

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AddEmployer } from "../config/actions";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import './style.css';
 
 function AddStagiaire() {
     const dispatch = useDispatch();
@@ -10,13 +11,19 @@ function AddStagiaire() {
     const [nom, setNom] = useState("");
     const [departement, setDepartement] = useState("");
 
-    // Function to handle adding a new employer
     const ajouterEmployer = (event) => {
         event.preventDefault();
+        const parsedMatricule = parseInt(matricule);
+
+        if (isNaN(parsedMatricule)) {
+            alert("Matricule must be a valid number");
+            return;
+        }
+
         if (window.confirm("Add new employer?")) {
             dispatch(
                 AddEmployer({
-                    matricule: parseInt(matricule),
+                    matricule: parsedMatricule,
                     nom: nom,
                     departement: departement
                 })

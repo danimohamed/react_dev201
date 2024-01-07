@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { DeleteEmployer } from "../config/actions";
 import { Link } from "react-router-dom";
+import './style.css';
 
 function ListStagiaire() {
     const employers = useSelector((state) => state.employers);

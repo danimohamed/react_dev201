@@ -3,6 +3,7 @@ import AddStagiaire from "./composant/Add";
 import ListStagiaire from "./composant/List";
 import EditStagiaire from "./composant/Edit";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import './style.css';
 
 
 function App() {
